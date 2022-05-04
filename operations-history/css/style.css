@@ -162,7 +162,7 @@ body {
 .main {
     display: grid;
     grid-template-columns: 243px 1fr;
-    grid-auto-rows: auto 700px 34px;
+    grid-auto-rows: auto 695px 34px;
     grid-template-areas: 'toolbar toolbar'
                          'menu table'
                          'menu pages';
@@ -341,6 +341,7 @@ body {
 /* Фильтр */
 
 .filter {
+    z-index: 2;
     position: relative;
     margin-right: auto;
 }
@@ -515,26 +516,41 @@ body {
 /* Табилца */
 
 .table {
+    z-index: 1;
     grid-area: table;
+    margin-bottom: 10px;
+    padding-right: 8px;
+    padding-left: 8px;
     margin-top: 12px;
-    margin-bottom: 16px;
-    /* padding-bottom: 20px; */
-    font-size: 14px;
-    border-radius: 14px;
+    max-width: 943px;
+    border-radius: 12px;
     background-color: #EFF5F8;
-    overflow: hidden;
+    
+}
+
+.table__blok {
+    height: 665px;
     overflow-x: scroll;
+    font-size: 14px;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    
 }
 
-.table::-webkit-scrollbar-track {
-    height: 3px;
+.table__blok::-webkit-scrollbar {
+    height: 4px;
 }
-
-.table__head,
-.table__body {
-    padding-right: 7px;
-    padding-left: 7px;
+.table__blok::-webkit-scrollbar-button {  background-color: red; }
+.table__blok::-webkit-scrollbar-track {  background-color: #999;}
+.table__blok::-webkit-scrollbar-track-piece { 
+    background-color: #EFF5F8; 
+    padding-left: 10px;
 }
+.table__blok::-webkit-scrollbar-thumb { 
+    width: 237px;
+    background-color: #40A7EA; 
+    border-radius: 3px;}
+.table__blok::-webkit-resizer { background-color: orange;}
 
 .my-orders .table__head,
 .my-orders .table__body {
@@ -543,10 +559,47 @@ body {
 
 .table__head {
     margin-bottom: 12px;
-    border-top-right-radius: 14px;
-    border-top-left-radius: 14px;
     background-color: #FCFEFF;
 }
+
+.my-orders,
+.transaction-history {
+    position: relative;
+}
+
+.transaction-history::before,
+.my-orders::before,
+.transaction-history::after,
+.my-orders::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 13px;
+    background-color: #FCFEFF;
+}
+
+.transaction-history::before,
+.my-orders::before {
+    left: 0;
+    border-top-left-radius: 12px;
+}
+
+.transaction-history::after,
+.my-orders::after {
+    right: 0;
+    border-top-right-radius: 12px;
+}
+
+.my-orders::before,
+.my-orders::after {
+    height: 44px;
+}
+
+.transaction-history::before,
+.transaction-history::after {
+    height: 49px;
+}
+
 
 .table__line {
     display: grid;
@@ -566,13 +619,13 @@ body {
 }
 
 .transaction-history .table__line {
-    grid-template-columns: 115px 76px 105px 120px 50px 85px 125px 87px;
+    grid-template-columns: 135px 90px 120px 130px 60px 100px 150px 100px;
 }
 
 .my-orders .table__line {
     padding-top: 6px;
     padding-bottom: 6px;
-    grid-template-columns: 76px 168px 105px 140px 137px 143px 80px 107px 210px 154px 65px;
+    grid-template-columns: 76px 168px 105px 140px 137px 143px 80px 107px 210px 154px 75px;
 }
 
 .table__title,
@@ -946,9 +999,8 @@ body {
         color: #142546;
     }
 
-    /* Таблица */
-
     .table {
+        position: relative;
         margin-top: 0;
         padding: 10px 0 10px 0;
         min-height: 220px;
@@ -956,19 +1008,31 @@ body {
         border-top-left-radius: 0;
     }
 
+    .table__blok {
+        overflow-x: visible;
+        height: 505px;
+    }
+
+    .transaction-history::before,
+    .my-orders::before,
+    .transaction-history::after,
+    .my-orders::after {
+        display: none;
+    }
+
     .table__body {
-        margin-right: 30px;
-        margin-left: 30px;
+        /* margin-right: 20px;
+        margin-left: 20px; */
         padding: 0;
         max-height: 500px;
-        overflow: hidden;
-        overflow-y: scroll;
+        overflow: scroll;
     }
 
     .table__line,
     .my-orders .table__line {
         padding: 16px 10px;
         border-radius: 0;
+        border-radius: 10px;
     }
 
 
@@ -982,7 +1046,7 @@ body {
     }
 
     .table__title-line {
-        width: 200px;
+        width: 190px;
         text-align: left;
     }
 
