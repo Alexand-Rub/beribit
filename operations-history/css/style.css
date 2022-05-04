@@ -162,7 +162,7 @@ body {
 .main {
     display: grid;
     grid-template-columns: 243px 1fr;
-    grid-auto-rows: auto 670px 34px;
+    grid-auto-rows: auto 700px 34px;
     grid-template-areas: 'toolbar toolbar'
                          'menu table'
                          'menu pages';
@@ -518,16 +518,27 @@ body {
     grid-area: table;
     margin-top: 12px;
     margin-bottom: 16px;
-    padding-bottom: 20px;
+    /* padding-bottom: 20px; */
     font-size: 14px;
     border-radius: 14px;
     background-color: #EFF5F8;
+    overflow: hidden;
+    overflow-x: scroll;
+}
+
+.table::-webkit-scrollbar-track {
+    height: 3px;
 }
 
 .table__head,
 .table__body {
     padding-right: 7px;
     padding-left: 7px;
+}
+
+.my-orders .table__head,
+.my-orders .table__body {
+    width: 1777px;
 }
 
 .table__head {
@@ -538,15 +549,30 @@ body {
 }
 
 .table__line {
-    display: flex;
+    display: grid;
+    align-items: center;
     justify-content: space-between;
-    padding: 15px 12px;
+    padding: 16px 12px;
     background-color: #FCFEFF;
     border-radius: 10px;
 }
 
+.table__line:nth-child(2n) {
+    background-color: #EEFAFF;
+}
+
 .table__line:not(:last-child) {
     margin-bottom: 6px;
+}
+
+.transaction-history .table__line {
+    grid-template-columns: 115px 76px 105px 120px 50px 85px 125px 87px;
+}
+
+.my-orders .table__line {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    grid-template-columns: 76px 168px 105px 140px 137px 143px 80px 107px 210px 154px 65px;
 }
 
 .table__title,
@@ -558,6 +584,22 @@ body {
     display: none;
 }
 
+.table__cell {
+    text-align: center;
+}
+
+.table__cell:first-child {
+    text-align: left;
+}
+
+.table__cell:last-child {
+    text-align: right;
+}
+
+.history-of-fiat .table__cell:nth-child(3n) {
+    text-align: right;
+}
+
 .buy {
     color: #1BD079;
 }
@@ -566,37 +608,11 @@ body {
     color: #FD5454;
 }
 
-.table__cell-time, .table__cell-couple, 
-.table__cell-direction, .table__cell-volume,
-.table__cell-price, .table__cell-type,
-.table__cell-amount, .table__cell-commission {
-    text-align: center;
+.table__more-link {
+    color: #40A7EA;
+    text-decoration: underline;
 }
 
-.table__cell-time {
-    min-width: 115px;
-}
-.table__cell-couple {
-    min-width: 76px;
-}
-.table__cell-direction {
-    min-width: 104px;
-}
-.table__cell-volume {
-    min-width: 113px;
-}
-.table__cell-price {
-    min-width: 45px;
-}
-.table__cell-type {
-    min-width: 81px;
-}
-.table__cell-amount {
-    min-width: 125px;
-}
-.table__cell-commission {
-    min-width: 87px;
-}
 
 .table__no-contect {
     margin-top: 70px;
