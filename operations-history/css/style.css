@@ -567,14 +567,13 @@ body {
 }
 
 .my-orders,
-.transaction-history {
+.transaction-history,
+.table {
     position: relative;
 }
 
-.transaction-history::before,
-.my-orders::before,
-.transaction-history::after,
-.my-orders::after {
+.table::before,
+.table::after {
     content: '';
     position: absolute;
     top: 0;
@@ -582,26 +581,26 @@ body {
     background-color: #FCFEFF;
 }
 
-.transaction-history::before,
-.my-orders::before {
+.table::before {
     left: 0;
     border-top-left-radius: 12px;
 }
 
-.transaction-history::after,
-.my-orders::after {
+.table::after {
     right: 0;
     border-top-right-radius: 12px;
 }
 
-.my-orders::before,
-.my-orders::after {
-    height: 44px;
+.table::after,
+.table::before {
+    height: 48px;
 }
 
-.transaction-history::before,
-.transaction-history::after {
-    height: 49px;
+.trade-turnover::after,
+.trade-turnover::before,
+.my-orders::after,
+.my-orders::before {
+    height: 64px;
 }
 
 
@@ -622,6 +621,11 @@ body {
     margin-bottom: 6px;
 }
 
+.fiat-account-history .table__line {
+    grid-template-columns: repeat(4, 1fr);
+    /* grid-template-columns: 0.9fr 1fr 1fr 1fr 1fr 1fr 0.7fr; */
+    /* grid-template-columns: 135px 110px 120px 130px; */
+}
 .account-history-cryptocurrencies .table__line {
     grid-template-columns: repeat(6, 1fr);
     /* grid-template-columns: 0.9fr 1fr 1fr 1fr 1fr 1fr 0.7fr; */
@@ -646,8 +650,6 @@ body {
     grid-template-columns: 135px 90px 120px 130px 60px 100px 150px 100px;
 }
 .my-orders .table__line {
-    padding-top: 6px;
-    padding-bottom: 6px;
     grid-template-columns: 76px 168px 105px 140px 137px 143px 80px 107px 210px 154px 75px;
 }
 
