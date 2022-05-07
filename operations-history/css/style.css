@@ -622,6 +622,11 @@ body {
     margin-bottom: 6px;
 }
 
+.account-history-cryptocurrencies .table__line {
+    grid-template-columns: repeat(6, 1fr);
+    /* grid-template-columns: 0.9fr 1fr 1fr 1fr 1fr 1fr 0.7fr; */
+    /* grid-template-columns: 135px 110px 120px 130px; */
+}
 .trade-turnover .table__line {
     /* grid-template-columns: repeat(7, 1fr); */
     grid-template-columns: 0.9fr 1fr 1fr 1fr 1fr 1fr 0.7fr;
