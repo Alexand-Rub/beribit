@@ -41,7 +41,7 @@
             </div>
         </header>
         <main class="main">
-            <aside id="menu" class="menu">
+            <aside id="menu" class="menu details-menu">
                 <button id="menu-btn" class="menu__btn menu__transaction">История сделок</button>
                 <ul class="menu__list">
                     <li class="menu__item menu__item_active">
@@ -69,7 +69,7 @@
             </aside>
             <script src="js/menu.js"></script>
             <!-- Панель инструментов -->
-            <section class="toolbar">
+            <section class="toolbar details-toolbar">
                 <form action="#" class="search">
                     <button id="menu-btn" class="search__btn"></button>
                     <input type="text" class="search__inp" placeholder="Поиск по таблице...">
@@ -121,17 +121,17 @@
                 </div>
             </section>
             <!-- Таблица -->
-            <section class="table trade-turnover">
+            <section class="table details">
+                <a href="#" class="details__link"></a>
                 <div class="table__blok">
                     <div class="table__head">
                         <div class="table__line">
+                            <p class="table__title table__cell"></p>
+                            <p class="table__title table__cell">ID ордера</p>
                             <p class="table__title table__cell">Время</p>
-                            <p class="table__title table__cell">Оборот P2P</p>
-                            <p class="table__title table__cell">Объём торгов</p>
-                            <p class="table__title table__cell">Созданные коды</p>
-                            <p class="table__title table__cell">Зачисленные коды</p>
-                            <p class="table__title table__cell">Депозит фиат</p>
-                            <p class="table__title table__cell">Вывод фиат</p>
+                            <p class="table__title table__cell">Объем</p>
+                            <p class="table__title table__cell">Цена</p>
+                            <p class="table__title table__cell">Комиссия</p>
                         </div>
                     </div>
                     
@@ -139,342 +139,276 @@
                         
                         <div class="table__line">
                             <div class="table__cell">
+                            </div>
+                            <div class="table__cell">
+                                <p class="table__title-line">ID ордера</p>
+                                <p class="table__value">111232</p>
+                            </div>
+                            <div class="table__cell">
                                 <p class="table__title-line">Время</p>
-                                <p class="table__value">23.06.2020, 18:24</p>
+                                <p class="table__value">06.04.2022 12:42</p>
                             </div>
                             <div class="table__cell">
-                                <p class="table__title-line">Оборот P2P</p>
-                                <p class="table__value">420 000.00 RUB</p>
+                                <p class="table__title-line">Объем</p>
+                                <p class="table__value">1 564.00 USDT</p>
                             </div>
                             <div class="table__cell">
-                                <p class="table__title-line">Объём торгов</p>
-                                <p class="table__value">36 450 007.50 RUB</p>
+                                <p class="table__title-line">Цена</p>
+                                <p class="table__value">75.80</p>
                             </div>
                             <div class="table__cell">
-                                <p class="table__title-line">Созданные коды</p>
-                                <p class="table__value">215 000.00 RUB</p>
-                            </div>
-                            <div class="table__cell">
-                                <p class="table__title-line">Зачисленные коды</p>
-                                <p class="table__value">801 900.00 RUB</p>
-                            </div>
-                            <div class="table__cell">
-                                <p class="table__title-line">Депозит фиат</p>
-                                <p class="table__value">1 000 000.00 RUB</p>
-                            </div>
-                            <div class="table__cell">
-                                <p class="table__title-line">Вывод фиат</p>
-                                <p class="table__value">0,00 RUB</p>
+                                <p class="table__title-line">Комиссия</p>
+                                <p class="table__value">1.56 USDT</p>
                             </div>
                         </div>
                         
                         <div class="table__line">
                             <div class="table__cell">
+                            </div>
+                            <div class="table__cell">
+                                <p class="table__title-line">ID ордера</p>
+                                <p class="table__value">111232</p>
+                            </div>
+                            <div class="table__cell">
                                 <p class="table__title-line">Время</p>
-                                <p class="table__value">23.06.2020, 18:24</p>
+                                <p class="table__value">06.04.2022 12:42</p>
                             </div>
                             <div class="table__cell">
-                                <p class="table__title-line">Оборот P2P</p>
-                                <p class="table__value">420 000.00 RUB</p>
+                                <p class="table__title-line">Объем</p>
+                                <p class="table__value">1 564.00 USDT</p>
                             </div>
                             <div class="table__cell">
-                                <p class="table__title-line">Объём торгов</p>
-                                <p class="table__value">36 450 007.50 RUB</p>
+                                <p class="table__title-line">Цена</p>
+                                <p class="table__value">75.80</p>
                             </div>
                             <div class="table__cell">
-                                <p class="table__title-line">Созданные коды</p>
-                                <p class="table__value">215 000.00 RUB</p>
-                            </div>
-                            <div class="table__cell">
-                                <p class="table__title-line">Зачисленные коды</p>
-                                <p class="table__value">801 900.00 RUB</p>
-                            </div>
-                            <div class="table__cell">
-                                <p class="table__title-line">Депозит фиат</p>
-                                <p class="table__value">1 000 000.00 RUB</p>
-                            </div>
-                            <div class="table__cell">
-                                <p class="table__title-line">Вывод фиат</p>
-                                <p class="table__value">0,00 RUB</p>
+                                <p class="table__title-line">Комиссия</p>
+                                <p class="table__value">1.56 USDT</p>
                             </div>
                         </div>
                         
                         <div class="table__line">
                             <div class="table__cell">
+                            </div>
+                            <div class="table__cell">
+                                <p class="table__title-line">ID ордера</p>
+                                <p class="table__value">111232</p>
+                            </div>
+                            <div class="table__cell">
                                 <p class="table__title-line">Время</p>
-                                <p class="table__value">23.06.2020, 18:24</p>
+                                <p class="table__value">06.04.2022 12:42</p>
                             </div>
                             <div class="table__cell">
-                                <p class="table__title-line">Оборот P2P</p>
-                                <p class="table__value">420 000.00 RUB</p>
+                                <p class="table__title-line">Объем</p>
+                                <p class="table__value">1 564.00 USDT</p>
                             </div>
                             <div class="table__cell">
-                                <p class="table__title-line">Объём торгов</p>
-                                <p class="table__value">36 450 007.50 RUB</p>
+                                <p class="table__title-line">Цена</p>
+                                <p class="table__value">75.80</p>
                             </div>
                             <div class="table__cell">
-                                <p class="table__title-line">Созданные коды</p>
-                                <p class="table__value">215 000.00 RUB</p>
-                            </div>
-                            <div class="table__cell">
-                                <p class="table__title-line">Зачисленные коды</p>
-                                <p class="table__value">801 900.00 RUB</p>
-                            </div>
-                            <div class="table__cell">
-                                <p class="table__title-line">Депозит фиат</p>
-                                <p class="table__value">1 000 000.00 RUB</p>
-                            </div>
-                            <div class="table__cell">
-                                <p class="table__title-line">Вывод фиат</p>
-                                <p class="table__value">0,00 RUB</p>
+                                <p class="table__title-line">Комиссия</p>
+                                <p class="table__value">1.56 USDT</p>
                             </div>
                         </div>
                         
                         <div class="table__line table__line_mobile">
                             <div class="table__cell">
+                            </div>
+                            <div class="table__cell">
+                                <p class="table__title-line">ID ордера</p>
+                                <p class="table__value">111232</p>
+                            </div>
+                            <div class="table__cell">
                                 <p class="table__title-line">Время</p>
-                                <p class="table__value">23.06.2020, 18:24</p>
+                                <p class="table__value">06.04.2022 12:42</p>
                             </div>
                             <div class="table__cell">
-                                <p class="table__title-line">Оборот P2P</p>
-                                <p class="table__value">420 000.00 RUB</p>
+                                <p class="table__title-line">Объем</p>
+                                <p class="table__value">1 564.00 USDT</p>
                             </div>
                             <div class="table__cell">
-                                <p class="table__title-line">Объём торгов</p>
-                                <p class="table__value">36 450 007.50 RUB</p>
+                                <p class="table__title-line">Цена</p>
+                                <p class="table__value">75.80</p>
                             </div>
                             <div class="table__cell">
-                                <p class="table__title-line">Созданные коды</p>
-                                <p class="table__value">215 000.00 RUB</p>
-                            </div>
-                            <div class="table__cell">
-                                <p class="table__title-line">Зачисленные коды</p>
-                                <p class="table__value">801 900.00 RUB</p>
-                            </div>
-                            <div class="table__cell">
-                                <p class="table__title-line">Депозит фиат</p>
-                                <p class="table__value">1 000 000.00 RUB</p>
-                            </div>
-                            <div class="table__cell">
-                                <p class="table__title-line">Вывод фиат</p>
-                                <p class="table__value">0,00 RUB</p>
+                                <p class="table__title-line">Комиссия</p>
+                                <p class="table__value">1.56 USDT</p>
                             </div>
                         </div>
                         
                         <div class="table__line table__line_mobile">
                             <div class="table__cell">
+                            </div>
+                            <div class="table__cell">
+                                <p class="table__title-line">ID ордера</p>
+                                <p class="table__value">111232</p>
+                            </div>
+                            <div class="table__cell">
                                 <p class="table__title-line">Время</p>
-                                <p class="table__value">23.06.2020, 18:24</p>
+                                <p class="table__value">06.04.2022 12:42</p>
                             </div>
                             <div class="table__cell">
-                                <p class="table__title-line">Оборот P2P</p>
-                                <p class="table__value">420 000.00 RUB</p>
+                                <p class="table__title-line">Объем</p>
+                                <p class="table__value">1 564.00 USDT</p>
                             </div>
                             <div class="table__cell">
-                                <p class="table__title-line">Объём торгов</p>
-                                <p class="table__value">36 450 007.50 RUB</p>
+                                <p class="table__title-line">Цена</p>
+                                <p class="table__value">75.80</p>
                             </div>
                             <div class="table__cell">
-                                <p class="table__title-line">Созданные коды</p>
-                                <p class="table__value">215 000.00 RUB</p>
-                            </div>
-                            <div class="table__cell">
-                                <p class="table__title-line">Зачисленные коды</p>
-                                <p class="table__value">801 900.00 RUB</p>
-                            </div>
-                            <div class="table__cell">
-                                <p class="table__title-line">Депозит фиат</p>
-                                <p class="table__value">1 000 000.00 RUB</p>
-                            </div>
-                            <div class="table__cell">
-                                <p class="table__title-line">Вывод фиат</p>
-                                <p class="table__value">0,00 RUB</p>
+                                <p class="table__title-line">Комиссия</p>
+                                <p class="table__value">1.56 USDT</p>
                             </div>
                         </div>
                         
                         <div class="table__line table__line_mobile">
                             <div class="table__cell">
+                            </div>
+                            <div class="table__cell">
+                                <p class="table__title-line">ID ордера</p>
+                                <p class="table__value">111232</p>
+                            </div>
+                            <div class="table__cell">
                                 <p class="table__title-line">Время</p>
-                                <p class="table__value">23.06.2020, 18:24</p>
+                                <p class="table__value">06.04.2022 12:42</p>
                             </div>
                             <div class="table__cell">
-                                <p class="table__title-line">Оборот P2P</p>
-                                <p class="table__value">420 000.00 RUB</p>
+                                <p class="table__title-line">Объем</p>
+                                <p class="table__value">1 564.00 USDT</p>
                             </div>
                             <div class="table__cell">
-                                <p class="table__title-line">Объём торгов</p>
-                                <p class="table__value">36 450 007.50 RUB</p>
+                                <p class="table__title-line">Цена</p>
+                                <p class="table__value">75.80</p>
                             </div>
                             <div class="table__cell">
-                                <p class="table__title-line">Созданные коды</p>
-                                <p class="table__value">215 000.00 RUB</p>
-                            </div>
-                            <div class="table__cell">
-                                <p class="table__title-line">Зачисленные коды</p>
-                                <p class="table__value">801 900.00 RUB</p>
-                            </div>
-                            <div class="table__cell">
-                                <p class="table__title-line">Депозит фиат</p>
-                                <p class="table__value">1 000 000.00 RUB</p>
-                            </div>
-                            <div class="table__cell">
-                                <p class="table__title-line">Вывод фиат</p>
-                                <p class="table__value">0,00 RUB</p>
+                                <p class="table__title-line">Комиссия</p>
+                                <p class="table__value">1.56 USDT</p>
                             </div>
                         </div>
                         
                         <div class="table__line table__line_mobile">
                             <div class="table__cell">
+                            </div>
+                            <div class="table__cell">
+                                <p class="table__title-line">ID ордера</p>
+                                <p class="table__value">111232</p>
+                            </div>
+                            <div class="table__cell">
                                 <p class="table__title-line">Время</p>
-                                <p class="table__value">23.06.2020, 18:24</p>
+                                <p class="table__value">06.04.2022 12:42</p>
                             </div>
                             <div class="table__cell">
-                                <p class="table__title-line">Оборот P2P</p>
-                                <p class="table__value">420 000.00 RUB</p>
+                                <p class="table__title-line">Объем</p>
+                                <p class="table__value">1 564.00 USDT</p>
                             </div>
                             <div class="table__cell">
-                                <p class="table__title-line">Объём торгов</p>
-                                <p class="table__value">36 450 007.50 RUB</p>
+                                <p class="table__title-line">Цена</p>
+                                <p class="table__value">75.80</p>
                             </div>
                             <div class="table__cell">
-                                <p class="table__title-line">Созданные коды</p>
-                                <p class="table__value">215 000.00 RUB</p>
-                            </div>
-                            <div class="table__cell">
-                                <p class="table__title-line">Зачисленные коды</p>
-                                <p class="table__value">801 900.00 RUB</p>
-                            </div>
-                            <div class="table__cell">
-                                <p class="table__title-line">Депозит фиат</p>
-                                <p class="table__value">1 000 000.00 RUB</p>
-                            </div>
-                            <div class="table__cell">
-                                <p class="table__title-line">Вывод фиат</p>
-                                <p class="table__value">0,00 RUB</p>
+                                <p class="table__title-line">Комиссия</p>
+                                <p class="table__value">1.56 USDT</p>
                             </div>
                         </div>
                         
                         <div class="table__line table__line_mobile">
                             <div class="table__cell">
+                            </div>
+                            <div class="table__cell">
+                                <p class="table__title-line">ID ордера</p>
+                                <p class="table__value">111232</p>
+                            </div>
+                            <div class="table__cell">
                                 <p class="table__title-line">Время</p>
-                                <p class="table__value">23.06.2020, 18:24</p>
+                                <p class="table__value">06.04.2022 12:42</p>
                             </div>
                             <div class="table__cell">
-                                <p class="table__title-line">Оборот P2P</p>
-                                <p class="table__value">420 000.00 RUB</p>
+                                <p class="table__title-line">Объем</p>
+                                <p class="table__value">1 564.00 USDT</p>
                             </div>
                             <div class="table__cell">
-                                <p class="table__title-line">Объём торгов</p>
-                                <p class="table__value">36 450 007.50 RUB</p>
+                                <p class="table__title-line">Цена</p>
+                                <p class="table__value">75.80</p>
                             </div>
                             <div class="table__cell">
-                                <p class="table__title-line">Созданные коды</p>
-                                <p class="table__value">215 000.00 RUB</p>
-                            </div>
-                            <div class="table__cell">
-                                <p class="table__title-line">Зачисленные коды</p>
-                                <p class="table__value">801 900.00 RUB</p>
-                            </div>
-                            <div class="table__cell">
-                                <p class="table__title-line">Депозит фиат</p>
-                                <p class="table__value">1 000 000.00 RUB</p>
-                            </div>
-                            <div class="table__cell">
-                                <p class="table__title-line">Вывод фиат</p>
-                                <p class="table__value">0,00 RUB</p>
+                                <p class="table__title-line">Комиссия</p>
+                                <p class="table__value">1.56 USDT</p>
                             </div>
                         </div>
                         
                         <div class="table__line table__line_mobile">
                             <div class="table__cell">
+                            </div>
+                            <div class="table__cell">
+                                <p class="table__title-line">ID ордера</p>
+                                <p class="table__value">111232</p>
+                            </div>
+                            <div class="table__cell">
                                 <p class="table__title-line">Время</p>
-                                <p class="table__value">23.06.2020, 18:24</p>
+                                <p class="table__value">06.04.2022 12:42</p>
                             </div>
                             <div class="table__cell">
-                                <p class="table__title-line">Оборот P2P</p>
-                                <p class="table__value">420 000.00 RUB</p>
+                                <p class="table__title-line">Объем</p>
+                                <p class="table__value">1 564.00 USDT</p>
                             </div>
                             <div class="table__cell">
-                                <p class="table__title-line">Объём торгов</p>
-                                <p class="table__value">36 450 007.50 RUB</p>
+                                <p class="table__title-line">Цена</p>
+                                <p class="table__value">75.80</p>
                             </div>
                             <div class="table__cell">
-                                <p class="table__title-line">Созданные коды</p>
-                                <p class="table__value">215 000.00 RUB</p>
-                            </div>
-                            <div class="table__cell">
-                                <p class="table__title-line">Зачисленные коды</p>
-                                <p class="table__value">801 900.00 RUB</p>
-                            </div>
-                            <div class="table__cell">
-                                <p class="table__title-line">Депозит фиат</p>
-                                <p class="table__value">1 000 000.00 RUB</p>
-                            </div>
-                            <div class="table__cell">
-                                <p class="table__title-line">Вывод фиат</p>
-                                <p class="table__value">0,00 RUB</p>
+                                <p class="table__title-line">Комиссия</p>
+                                <p class="table__value">1.56 USDT</p>
                             </div>
                         </div>
                         
                         <div class="table__line table__line_mobile">
                             <div class="table__cell">
+                            </div>
+                            <div class="table__cell">
+                                <p class="table__title-line">ID ордера</p>
+                                <p class="table__value">111232</p>
+                            </div>
+                            <div class="table__cell">
                                 <p class="table__title-line">Время</p>
-                                <p class="table__value">23.06.2020, 18:24</p>
+                                <p class="table__value">06.04.2022 12:42</p>
                             </div>
                             <div class="table__cell">
-                                <p class="table__title-line">Оборот P2P</p>
-                                <p class="table__value">420 000.00 RUB</p>
+                                <p class="table__title-line">Объем</p>
+                                <p class="table__value">1 564.00 USDT</p>
                             </div>
                             <div class="table__cell">
-                                <p class="table__title-line">Объём торгов</p>
-                                <p class="table__value">36 450 007.50 RUB</p>
+                                <p class="table__title-line">Цена</p>
+                                <p class="table__value">75.80</p>
                             </div>
                             <div class="table__cell">
-                                <p class="table__title-line">Созданные коды</p>
-                                <p class="table__value">215 000.00 RUB</p>
-                            </div>
-                            <div class="table__cell">
-                                <p class="table__title-line">Зачисленные коды</p>
-                                <p class="table__value">801 900.00 RUB</p>
-                            </div>
-                            <div class="table__cell">
-                                <p class="table__title-line">Депозит фиат</p>
-                                <p class="table__value">1 000 000.00 RUB</p>
-                            </div>
-                            <div class="table__cell">
-                                <p class="table__title-line">Вывод фиат</p>
-                                <p class="table__value">0,00 RUB</p>
+                                <p class="table__title-line">Комиссия</p>
+                                <p class="table__value">1.56 USDT</p>
                             </div>
                         </div>
                         
                         <div class="table__line table__line_mobile">
                             <div class="table__cell">
+                            </div>
+                            <div class="table__cell">
+                                <p class="table__title-line">ID ордера</p>
+                                <p class="table__value">111232</p>
+                            </div>
+                            <div class="table__cell">
                                 <p class="table__title-line">Время</p>
-                                <p class="table__value">23.06.2020, 18:24</p>
+                                <p class="table__value">06.04.2022 12:42</p>
                             </div>
                             <div class="table__cell">
-                                <p class="table__title-line">Оборот P2P</p>
-                                <p class="table__value">420 000.00 RUB</p>
+                                <p class="table__title-line">Объем</p>
+                                <p class="table__value">1 564.00 USDT</p>
                             </div>
                             <div class="table__cell">
-                                <p class="table__title-line">Объём торгов</p>
-                                <p class="table__value">36 450 007.50 RUB</p>
+                                <p class="table__title-line">Цена</p>
+                                <p class="table__value">75.80</p>
                             </div>
                             <div class="table__cell">
-                                <p class="table__title-line">Созданные коды</p>
-                                <p class="table__value">215 000.00 RUB</p>
-                            </div>
-                            <div class="table__cell">
-                                <p class="table__title-line">Зачисленные коды</p>
-                                <p class="table__value">801 900.00 RUB</p>
-                            </div>
-                            <div class="table__cell">
-                                <p class="table__title-line">Депозит фиат</p>
-                                <p class="table__value">1 000 000.00 RUB</p>
-                            </div>
-                            <div class="table__cell">
-                                <p class="table__title-line">Вывод фиат</p>
-                                <p class="table__value">0,00 RUB</p>
+                                <p class="table__title-line">Комиссия</p>
+                                <p class="table__value">1.56 USDT</p>
                             </div>
                         </div>
                     </div> 
