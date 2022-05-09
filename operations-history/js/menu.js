@@ -1,4 +1,4 @@
-
+document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.menu__link').forEach((item) =>
         item.addEventListener('click', () => {
             var text = item.textContent;
@@ -19,9 +19,10 @@
     );
 
 
-document.querySelectorAll('.menu__btn').forEach((item) =>
-    item.addEventListener('click', () => {
-        const parent = item.parentNode;
-        parent.classList.toggle('menu_active');
-    })
-)
+    document.querySelectorAll('.menu__btn').forEach((item) =>
+        item.addEventListener('click', () => {
+            const parent = item.parentNode;
+            parent.classList.toggle('menu_active');
+        })
+    )
+})

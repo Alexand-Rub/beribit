@@ -1152,6 +1152,10 @@ body {
         display: inline-block;
     }
 
+    .footer__triger {
+        cursor: pointer;
+    }
+
     .footer__triger::after {
         content: '';
         position: absolute;
