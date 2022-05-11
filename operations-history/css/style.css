@@ -1081,6 +1081,14 @@ body {
     .table__blok {
         overflow-x: visible;
         min-height: auto;
+        overflow: auto;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    .table__blok::-webkit-scrollbar {
+        width: 0;
+        height: 0;
     }
 
     .table::before,
