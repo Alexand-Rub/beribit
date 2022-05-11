@@ -86,11 +86,6 @@ body {
     color: #142546;
 }
 
-
-.header__link:hover {
-    color: #40A7EA;
-}
-
 .notification {
     position: relative;
     margin-right: 20px;
@@ -256,8 +251,7 @@ body {
     -webkit-mask-image: url(../img/menu/trade-turnover-icon.svg);
 }
 
-.menu__item_active .menu__link,
-.menu__link:hover {
+.menu__item_active .menu__link {
     color: #40A7EA;
     background: linear-gradient(90deg, rgba(0, 187, 165, 0.06) 0%, rgba(0, 180, 158, 0.02) 50%);
 }
@@ -484,8 +478,6 @@ body {
     opacity: 0;
 }
 
-.filter__triger:hover,
-.filter__option-name:hover,
 .filter__radio:checked ~ .filter__option-name {
     color: #3FA5E7;
 }
@@ -550,6 +542,7 @@ body {
 .table__blok {
     overflow-x: scroll;
     font-size: 14px;
+    min-height: 668px;
     padding-bottom: 10px;
     border-bottom-left-radius: 12px;
     border-bottom-right-radius: 12px;
@@ -768,8 +761,7 @@ body {
     background-image: url(../img/page-next.svg);
 }
 
-.pages__item_active,
-.pages__item:hover {
+.pages__item_active {
     color: #40A7EA;
     background-color: #F4F9F8;
 }
@@ -864,6 +856,10 @@ body {
 
 
 @media (min-width: 1050px) {
+    .header__link:hover {
+        color: #40A7EA;
+    }
+
     .to-exel:hover,
     .to-csv:hover {
         color: #FCFEFF;
@@ -873,6 +869,22 @@ body {
     .filter:hover .filter__list,
     .filter__list:hover {
         display: block;
+    }
+
+    .filter__triger:hover,
+    .filter__option-name:hover,
+    .filter__radio:checked ~ .filter__option-name {
+        color: #3FA5E7;
+    }
+
+    .pages__item:hover {
+        color: #40A7EA;
+        background-color: #F4F9F8;
+    }
+
+    .menu__link:hover {
+        color: #40A7EA;
+        background: linear-gradient(90deg, rgba(0, 187, 165, 0.06) 0%, rgba(0, 180, 158, 0.02) 50%);
     }
 }
 
@@ -982,10 +994,6 @@ body {
 
     }
 
-    .menu__link:hover {
-        background: none;
-    }
-
     .toolbar {
         flex-direction: column-reverse;
         padding: 11px 20px;
@@ -1075,6 +1083,7 @@ body {
 
     .table__blok {
         overflow-x: visible;
+        min-height: auto;
     }
 
     .table::before,
