@@ -717,7 +717,7 @@ body {
     text-align: center;
 }
 
-.table__body:empty ~ .table__no-contect {
+.table__no-contect_active {
     display: block;
 }
 
@@ -896,9 +896,6 @@ body {
 }
 
 @media (max-width: 1104px) {
-    .logo {
-        margin-right: auto;
-    }
     .user-link,
     .header__burger,
     .main,
@@ -1121,7 +1118,7 @@ body {
     }
 
     .table__title-line {
-        width: 190px;
+        /* max-width: 174px; */
         text-align: left;
     }
 
@@ -1130,7 +1127,7 @@ body {
         flex-direction: column;
         align-items: flex-end;
         text-align: right;
-        width: 200px;
+        min-width: 135px;
     }
 
 
