@@ -342,7 +342,14 @@ body {
     margin-right: auto;
 }
 
+.filter__lable,
+.filter__big-lable,
+.filter__checkbox {
+    display: none;
+}
+
 .filter__btn {
+    position: relative;
     padding-left: 28px;
     width: 109px;
     height: 40px;
@@ -355,7 +362,7 @@ body {
     content: url(../img/filter-icon.svg);
     position: absolute;
     top: 9px;
-    left: 12px;
+    left: 8px;
     width: 24px;
     height: 24px;
 }
@@ -379,6 +386,8 @@ body {
     border-radius: 7px;
     background-color: #FCFEFF;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 .filter__item {
@@ -500,6 +509,9 @@ body {
     border: 1px solid #2D98DE;
     border-radius: 7px;
     background-color: #FCFEFF00;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    user-select: none; 
 }
 
 .to-exel {
@@ -541,6 +553,7 @@ body {
 
 .table__blok {
     overflow-x: scroll;
+    overflow-y: hidden;
     font-size: 14px;
     min-height: 668px;
     padding-bottom: 10px;
@@ -740,6 +753,9 @@ body {
     border-top: 1px solid #6CACD7;
     border-right: 1px solid #6CACD7;
     border-bottom: 1px solid #6CACD7;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    user-select: none; 
 }
 
 .pages__item:last-child,
@@ -1012,6 +1028,27 @@ body {
         height: 32px;
     }
 
+    .filter__btn_tel {
+        display: none;
+    }
+
+    .filter__lable {
+        display: block;
+    }
+
+    .filter__checkbox:checked ~ .filter__list,
+    .filter__checkbox:checked ~ .filter__big-lable {
+        display: block;
+    }
+
+    .filter__big-lable {
+        top: 0;
+        left: 0;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+    }
+
     .filter__btn:focus{
         outline:0
     }
@@ -1080,6 +1117,7 @@ body {
 
     .table__blok {
         overflow-x: visible;
+        overflow-y: hidden;
         min-height: auto;
         overflow: auto;
         -ms-overflow-style: none;

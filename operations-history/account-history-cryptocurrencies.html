@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="~/css/normalize.css">
-    <link rel="stylesheet" href="~/css/style.css">
-    <script src="~/js/menu.js"></script>
-    <script src="~/js/filter.js"></script>
-    <script src="~/js/footer.js"></script>
-    <script src="~/js/pages.js"></script>
-    <script src="~/js/table.js"></script>
+        <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/menu.js"></script>
+    <script src="js/filter.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/pages.js"></script>
+    <script src="js/table.js"></script>
     <title>Beribit</title>
 </head>
 <body>
@@ -80,9 +80,12 @@
                 </form>
                 <div class="toolbar__blok">
                     <div class="filter">
-                        <button class="filter__btn">
+                        <button class="filter__btn_tel filter__btn">
                             <span class="filter__text">Фильтр</span>
                         </button>
+                        <input type="checkbox" name="" id="filt" class="filter__checkbox">
+                        <label for="filt" class="filter__lable filter__btn"></label>
+                        <label for="filt" class="filter__big-lable"></label>
                         <ul class="filter__list">
                             <li class="filter__item filter__switch">
                                 <p class="filter__triger">По времени</p>
