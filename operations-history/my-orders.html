@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="telephone=no" name="format-detection" />
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/menu.js"></script>
@@ -82,7 +83,7 @@
                     <button id="menu-btn" class="search__btn"></button>
                     <input type="text" class="search__inp" placeholder="Поиск по таблице...">
                 </form>
-                <div class="toolbar__blok">
+                <div class="toolbar__blok ">
                     <div class="filter">
                         <button class="filter__btn">
                             <span class="filter__text">Фильтр</span>
@@ -129,8 +130,8 @@
             </section>
             <!-- Таблица -->
 
-            <section class="table my-orders ">
-                <div  class="table__blok">
+            <section id="table" class="table my-orders">
+                <div class="table__blok">
                     <div class="table__head">
                         <div class="table__line">
                             <p class="table__title table__cell">ID ордера</p>
@@ -145,8 +146,7 @@
                             <p class="table__title table__cell">Статус</p>
                             <p class="table__title table__cell">Детали</p>
                         </div>
-                    </div>
-                    
+                    </div>    
                     <div class="table__body">
                         <div class="table__line">
                             <div class="table__cell">
@@ -692,6 +692,7 @@
                     <p class="table__no-contect">Данные отсутствуют</p>
                 </div>
             </section>
+            
             <div class="pages">
                 <a href="#" class="pages__item"></a>
                 <a href="#" class="pages__item pages__item_active"><span>1</span></a>
