@@ -14,8 +14,7 @@
     <script src="js/table.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css"/>
     <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css"/>
-    <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
+    <script type="text/javascript" src="js/loading-spinner.js"></script>
     <title>Beribit</title>
 </head>
 <body>
@@ -52,7 +51,7 @@
                 <a href="" class="user__log-out"></a>
             </div>
         </header>
-        <main class="main">
+        <main class="main main_load">
             <aside id="menu" class="menu">
                 <button id="menu-btn" class="menu__btn menu__transaction">История сделок</button>
                 <ul class="menu__list">
@@ -62,10 +61,10 @@
                     <li class="menu__item">
                         <button class="menu__link menu__transaction">История сделок</button>
                     </li>
-                    <li class="menu__item menu__item_active">
+                    <li class="menu__item">
                         <button class="menu__link menu__account">История счета Фиат</button>
                     </li>
-                    <li class="menu__item">
+                    <li class="menu__item menu__item_active">
                         <button class="menu__link menu__cryptocurrency">История счета Криптовалюты</button>
                     </li>
                     <li class="menu__item">
@@ -87,9 +86,12 @@
                 </form>
                 <div class="toolbar__blok">
                     <div class="filter">
-                        <button class="filter__btn">
+                        <button class="filter__btn_tel filter__btn">
                             <span class="filter__text">Фильтр</span>
                         </button>
+                        <input type="checkbox" name="" id="filt" class="filter__checkbox">
+                        <label for="filt" class="filter__lable filter__btn"></label>
+                        <label for="filt" class="filter__big-lable"></label>
                         <ul class="filter__list">
                             <li class="filter__item filter__switch">
                                 <p class="filter__triger">По времени</p>
@@ -99,7 +101,7 @@
                                 <ul class="filter__options">
                                     <li class="filter__option">
                                         <input type="radio" name="couple" id="couple-1" class="filter__radio">
-                                        <label for="couple-1" class="filter__option-name">Пополнение</label>
+                                        <label for="couple-1" class="filter__option-name">USDT-RUB</label>
                                     </li>
                                     <li class="filter__option">
                                         <input type="radio" name="couple" id="couple-2" class="filter__radio">
@@ -130,221 +132,26 @@
                     <button class="to-csv">Экспорт CSV</button>
                 </div>
             </section>
+
             <!-- Таблица -->
-            <section id="table" class="table fiat-account-history">
+            <section id="table" class="table account-history-cryptocurrencies">
                 <table class="table__blok">
                     <thead class="table__head">
                         <tr class="table__line">
                             <th class="table__title table__cell">Время</th>
                             <th class="table__title table__cell">Тип</th>
+                            <th class="table__title table__cell">Криптовалюта (сеть)</th>
                             <th class="table__title table__cell">Сумма</th>
                             <th class="table__title table__cell">Комиссия</th>
+                            <th class="table__title table__cell">TxID</th>
                         </tr>
                     </thead>
-                    <tbody class="table__body">
-                        <tr class="table__line">
-                            <td class="table__cell">
-                                <p class="table__title-line">Время</p>
-                                <p class="table__value">23.06.2020, 18:24</p>
-                            </td>
-                            <td class="table__cell">
-                                <p class="table__title-line">Тип</p>
-                                <p class="table__value">Пополнение</p>
-                            </td>
-                            <td class="table__cell">
-                                <p class="table__title-line">Сумма</p>
-                                <p class="table__value">3 800 000,00 RUB</p>
-                            </td>
-                            <td class="table__cell">
-                                <p class="table__title-line">Комиссия</p>
-                                <p class="table__value">0.00</p>
-                            </td>
-                        </tr>
-                        <tr class="table__line">
-                            <td class="table__cell">
-                                <p class="table__title-line">Время</p>
-                                <p class="table__value">23.06.2020, 18:24</p>
-                            </td>
-                            <td class="table__cell">
-                                <p class="table__title-line">Тип</p>
-                                <p class="table__value">Пополнение</p>
-                            </td>
-                            <td class="table__cell">
-                                <p class="table__title-line">Сумма</p>
-                                <p class="table__value">3 800 000,00 RUB</p>
-                            </td>
-                            <td class="table__cell">
-                                <p class="table__title-line">Комиссия</p>
-                                <p class="table__value">0.00</p>
-                            </td>
-                        </tr> 
-                        <tr class="table__line">
-                            <td class="table__cell">
-                                <p class="table__title-line">Время</p>
-                                <p class="table__value">23.06.2020, 18:24</p>
-                            </td>
-                            <td class="table__cell">
-                                <p class="table__title-line">Тип</p>
-                                <p class="table__value">Пополнение</p>
-                            </td>
-                            <td class="table__cell">
-                                <p class="table__title-line">Сумма</p>
-                                <p class="table__value">3 800 000,00 RUB</p>
-                            </td>
-                            <td class="table__cell">
-                                <p class="table__title-line">Комиссия</p>
-                                <p class="table__value">0.00</p>
-                            </td>
-                        </tr>
-                        <tr class="table__line">
-                            <td class="table__cell">
-                                <p class="table__title-line">Время</p>
-                                <p class="table__value">23.06.2020, 18:24</p>
-                            </td>
-                            <td class="table__cell">
-                                <p class="table__title-line">Тип</p>
-                                <p class="table__value">Пополнение</p>
-                            </td>
-                            <td class="table__cell">
-                                <p class="table__title-line">Сумма</p>
-                                <p class="table__value">3 800 000,00 RUB</p>
-                            </td>
-                            <td class="table__cell">
-                                <p class="table__title-line">Комиссия</p>
-                                <p class="table__value">0.00</p>
-                            </td>
-                        </tr>
-                        <tr class="table__line">
-                            <td class="table__cell">
-                                <p class="table__title-line">Время</p>
-                                <p class="table__value">23.06.2020, 18:24</p>
-                            </td>
-                            <td class="table__cell">
-                                <p class="table__title-line">Тип</p>
-                                <p class="table__value">Пополнение</p>
-                            </td>
-                            <td class="table__cell">
-                                <p class="table__title-line">Сумма</p>
-                                <p class="table__value">3 800 000,00 RUB</p>
-                            </td>
-                            <td class="table__cell">
-                                <p class="table__title-line">Комиссия</p>
-                                <p class="table__value">0.00</p>
-                            </td>
-                        </tr>
-                        <tr class="table__line">
-                            <td class="table__cell">
-                                <p class="table__title-line">Время</p>
-                                <p class="table__value">23.06.2020, 18:24</p>
-                            </td>
-                            <td class="table__cell">
-                                <p class="table__title-line">Тип</p>
-                                <p class="table__value">Пополнение</p>
-                            </td>
-                            <td class="table__cell">
-                                <p class="table__title-line">Сумма</p>
-                                <p class="table__value">3 800 000,00 RUB</p>
-                            </td>
-                            <td class="table__cell">
-                                <p class="table__title-line">Комиссия</p>
-                                <p class="table__value">0.00</p>
-                            </td>
-                        </tr>
-                        <tr class="table__line">
-                            <td class="table__cell">
-                                <p class="table__title-line">Время</p>
-                                <p class="table__value">23.06.2020, 18:24</p>
-                            </td>
-                            <td class="table__cell">
-                                <p class="table__title-line">Тип</p>
-                                <p class="table__value">Пополнение</p>
-                            </td>
-                            <td class="table__cell">
-                                <p class="table__title-line">Сумма</p>
-                                <p class="table__value">3 800 000,00 RUB</p>
-                            </td>
-                            <td class="table__cell">
-                                <p class="table__title-line">Комиссия</p>
-                                <p class="table__value">0.00</p>
-                            </td>
-                        </tr>
-                        <tr class="table__line">
-                            <td class="table__cell">
-                                <p class="table__title-line">Время</p>
-                                <p class="table__value">23.06.2020, 18:24</p>
-                            </td>
-                            <td class="table__cell">
-                                <p class="table__title-line">Тип</p>
-                                <p class="table__value">Пополнение</p>
-                            </td>
-                            <td class="table__cell">
-                                <p class="table__title-line">Сумма</p>
-                                <p class="table__value">3 800 000,00 RUB</p>
-                            </td>
-                            <td class="table__cell">
-                                <p class="table__title-line">Комиссия</p>
-                                <p class="table__value">0.00</p>
-                            </td>
-                        </tr>
-                        <tr class="table__line">
-                            <td class="table__cell">
-                                <p class="table__title-line">Время</p>
-                                <p class="table__value">23.06.2020, 18:24</p>
-                            </td>
-                            <td class="table__cell">
-                                <p class="table__title-line">Тип</p>
-                                <p class="table__value">Пополнение</p>
-                            </td>
-                            <td class="table__cell">
-                                <p class="table__title-line">Сумма</p>
-                                <p class="table__value">3 800 000,00 RUB</p>
-                            </td>
-                            <td class="table__cell">
-                                <p class="table__title-line">Комиссия</p>
-                                <p class="table__value">0.00</p>
-                            </td>
-                        </tr>
-                        <tr class="table__line">
-                            <td class="table__cell">
-                                <p class="table__title-line">Время</p>
-                                <p class="table__value">23.06.2020, 18:24</p>
-                            </td>
-                            <td class="table__cell">
-                                <p class="table__title-line">Тип</p>
-                                <p class="table__value">Пополнение</p>
-                            </td>
-                            <td class="table__cell">
-                                <p class="table__title-line">Сумма</p>
-                                <p class="table__value">3 800 000,00 RUB</p>
-                            </td>
-                            <td class="table__cell">
-                                <p class="table__title-line">Комиссия</p>
-                                <p class="table__value">0.00</p>
-                            </td>
-                        </tr>
-                        <tr class="table__line">
-                            <td class="table__cell">
-                                <p class="table__title-line">Время</p>
-                                <p class="table__value">23.06.2020, 18:24</p>
-                            </td>
-                            <td class="table__cell">
-                                <p class="table__title-line">Тип</p>
-                                <p class="table__value">Пополнение</p>
-                            </td>
-                            <td class="table__cell">
-                                <p class="table__title-line">Сумма</p>
-                                <p class="table__value">3 800 000,00 RUB</p>
-                            </td>
-                            <td class="table__cell">
-                                <p class="table__title-line">Комиссия</p>
-                                <p class="table__value">0.00</p>
-                            </td>
-                        </tr>
+                    <tbody class="table__body">   
                     </tbody>
                 </table>
                 <p class="table__no-contect">Данные отсутствуют</p>
             </section>
-
+            <div class="loader"></div>
             <div class="pages">
                 <a href="#" class="pages__item"></a>
                 <a href="#" class="pages__item pages__item_active"><span>1</span></a>
