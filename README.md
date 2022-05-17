@@ -13,4 +13,6 @@
 4. Панели пользователя
 
 
+https://javascript.ru/forum/events/15857-ubrat-checked-s-radiobutton.html
+
 

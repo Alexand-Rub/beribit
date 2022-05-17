@@ -375,7 +375,6 @@ body {
     border-radius: 7px;
     background-color: #FCFEFF;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
-    cursor: pointer;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
@@ -474,6 +473,10 @@ body {
 .filter__radio {
     position: absolute;
     opacity: 0;
+}
+
+.filter__option-name {
+    cursor: pointer;
 }
 
 .filter__radio:checked ~ .filter__option-name {
