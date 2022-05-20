@@ -733,6 +733,7 @@ body {
 }
 
 .main_load .pages {
+    filter: blur(5px);
     pointer-events: none;
 }
 
