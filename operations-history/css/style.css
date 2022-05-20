@@ -518,6 +518,29 @@ body {
 }
 
 
+.main_load .search {
+    border: 1px solid #C1ECFE;
+    background-color: #FFFFFF;
+}
+
+.main_load .search__inp::placeholder {
+    color: #C1ECFE;
+}
+
+.main_load .search__btn {
+    background-image: url(../img/search_blok.svg);
+}
+
+.main_load .filter__btn {
+    background: #C1ECFE;
+}
+
+.main_load .to-exel,
+.main_load .to-csv {
+    color: #C1ECFE;
+    border: 1px solid #C1ECFE;
+}
+
 /* Табилца */
 
 .table {
@@ -733,8 +756,9 @@ body {
 }
 
 .main_load .pages {
-    filter: blur(5px);
     pointer-events: none;
+    filter: blur(5px);
+    
 }
 
 .pages__item {
