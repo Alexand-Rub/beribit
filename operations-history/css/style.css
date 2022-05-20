@@ -560,14 +560,23 @@ body {
 }
 
 .main_load .table::before {
-    contain: '';
+    content: '';
+    z-index: 1;
     position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
     width: 100%;
     height: 100%;
+    background: rgba(202, 228, 251, 0.2);
+    backdrop-filter: blur(5px);
+    border-radius: 14px;
 }
 
 .main_load .table::after{
     content: '';
+    z-index: 2;
     position: absolute;
     top: 44%;
     left: 47.4%;
@@ -589,7 +598,6 @@ body {
 }
 
 .main_load .table__blok {
-    filter: blur(5px);
     border-radius: 14px;
 }
 
