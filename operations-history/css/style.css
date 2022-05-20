@@ -697,14 +697,23 @@ body {
 }
 
 .table__no-contect {
-    margin-top: 70px;
     display: none;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
     font-size: 18px;
+    color: #AFB6BA;
     text-align: center;
+    background-color: transparent;
+    transform: translateX(-50%);
 }
 
-.table_no-contect .table__no-contect {
+.table_none .table__no-contect {
     display: block;
+}
+
+.table_none .table__blok {
+    height: 280px;
 }
 
 .table__more-link {
@@ -941,6 +950,11 @@ body {
 @media (max-width: 1104px) {
     .main_load .table::after {
         left: 44%;
+    }
+
+    .table__no-contect {
+        top: 45%;
+        bottom: auto;
     }
 
     .user-link,
