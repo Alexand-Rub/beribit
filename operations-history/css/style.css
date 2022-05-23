@@ -281,11 +281,10 @@ body {
 /* Поиск */
 
 .search {
+    display: flex;
+    align-items: center;
     position: relative;
     margin-right: 16px;
-    padding-top: 13px;
-    padding-right: 13px;
-    padding-bottom: 13px;
     padding-left: 46px;
     width: 271px;
     border: 1px solid #E2EEEC;
@@ -307,7 +306,7 @@ body {
 }
 
 .search__inp {
-    height: 20px;
+    height: 50px;
     border: none;
     outline: none;
     background-color: #F4F9F800;
@@ -1121,8 +1120,6 @@ body {
 
     .search {
         margin-right: 0;
-        padding-top: 12px;
-        padding-bottom: 12px;
         padding-left: 43px;
         width: 100%;
     }
