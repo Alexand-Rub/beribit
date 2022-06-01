@@ -512,7 +512,11 @@ body {
 .main_load .to-exel,
 .main_load .to-csv,
 .main_load .search,
-.main_load .filter {
+.main_load .filter,
+.table_none .to-exel,
+.table_none .to-csv,
+.table_none .search,
+.table_none .filter {
     pointer-events: none;
 }
 
@@ -778,7 +782,8 @@ body {
 }
 
 .main_load .pages,
-.main_table_load .pages{
+.main_table_load .pages,
+.table_none .pages{
     pointer-events: none;
     filter: blur(5px);
     
