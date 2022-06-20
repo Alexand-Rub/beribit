@@ -5,15 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="telephone=no" name="format-detection" />
-    <link rel="stylesheet" href="~/css/normalize.css">
-    <link rel="stylesheet" href="~/css/simplebar.css">
-    <link rel="stylesheet" href="~/css/style.css">
-    <script src="~/js/menu.js"></script>
-    <script src="~/js/filter.js"></script>
-    <script src="~/js/footer.js"></script>
-    <script src="~/js/pages.js"></script>
-    <script src="~/js/table.js"></script>
-    <script src="~/js/simplebar.min.js"></script>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/simplebar.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dark.css">
+    <script src="js/menu.js"></script>
+    <script src="js/filter.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/pages.js"></script>
+    <script src="js/table.js"></script>
+    <script src="js/mode.js"></script>
+    <script src="js/simplebar.min.js"></script>
     <title>Beribit</title>
 </head>
 <body>
@@ -49,6 +51,7 @@
                 <p class="user__mail">Iv***@mail.ru</p>
                 <a href="" class="user__log-out"></a>
             </div>
+            <button class="mode"></button>
         </header>
         <main class="main">
             <aside id="menu" class="menu">
@@ -86,9 +89,12 @@
                 </form>
                 <div class="toolbar__blok ">
                     <div class="filter">
-                        <button class="filter__btn">
+                        <button class="filter__btn_tel filter__btn">
                             <span class="filter__text">Фильтр</span>
                         </button>
+                        <input type="checkbox" name="" id="filt" class="filter__checkbox">
+                        <label for="filt" class="filter__lable filter__btn"></label>
+                        <label for="filt" class="filter__big-lable"></label>
                         <ul class="filter__list">
                             <li class="filter__item filter__switch">
                                 <p class="filter__triger">По времени</p>
@@ -132,7 +138,7 @@
 
             <!-- Таблица -->
             <section id="table" class="table my-orders">
-                <table class="table__blok">
+                <table class="my-orders table__blok">
                     <thead class="table__head">
                         <tr class="table__line">
                             <th class="table__title table__cell">ID ордера</th>
@@ -149,6 +155,545 @@
                         </tr>
                     </thead>    
                     <tbody class="table__body">
+                        <tr class="table__line">
+                            <td class="table__cell">
+                                <p class="table__title-line">ID ордера</p>
+                                <p class="table__value">111232</p>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Тип/направление</p>
+                                <p class="table__value">Покупка/лимит</p>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Объём</p>
+                                <p class="table__value">73 120.00 RUB</p>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Остаток по заявке</p>
+                                <p class="table__value">0.00 RUB</p>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Получено без учета комиссии</p>
+                                <p class="table__value">1000.00 USDT</p>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Получено с учетом комиссии</p>
+                                <p class="table__value">998.50 USDT</p>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Коммисия</p>
+                                <p class="table__value">1.50 USDT</p>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Средняя цена</p>
+                                <p class="table__value">73.12 RUB</p>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Время открытия/закрытия позиции</p>
+                                <div class="table__value">
+                                    <div>О - 17.04.2022 21:22:33</div>
+                                    <div>С - 17.04.2022 23:00:33</div>
+                                </div>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Статус</p>
+                                <p class="table__value">Отмененна</p>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Детали</p>
+                                <p class="table__value"><a href="#" class="table__more-link">Перейти</a></p>
+                            </td>
+                        </tr>
+                        <tr class="table__line">
+                            <td class="table__cell">
+                                <p class="table__title-line">ID ордера</p>
+                                <p class="table__value">111232</p>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Тип/направление</p>
+                                <p class="table__value">Покупка/лимит</p>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Объём</p>
+                                <p class="table__value">73 120.00 RUB</p>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Остаток по заявке</p>
+                                <p class="table__value">0.00 RUB</p>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Получено без учета комиссии</p>
+                                <p class="table__value">1000.00 USDT</p>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Получено с учетом комиссии</p>
+                                <p class="table__value">998.50 USDT</p>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Коммисия</p>
+                                <p class="table__value">1.50 USDT</p>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Средняя цена</p>
+                                <p class="table__value">73.12 RUB</p>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Время открытия/закрытия позиции</p>
+                                <div class="table__value">
+                                    <div>О - 17.04.2022 21:22:33</div>
+                                    <div>С - 17.04.2022 23:00:33</div>
+                                </div>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Статус</p>
+                                <p class="table__value">Отмененна</p>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Детали</p>
+                                <p class="table__value"><a href="#" class="table__more-link">Перейти</a></p>
+                            </td>
+                        </tr>
+                        <tr class="table__line">
+                            <td class="table__cell">
+                                <p class="table__title-line">ID ордера</p>
+                                <p class="table__value">111232</p>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Тип/направление</p>
+                                <p class="table__value">Покупка/лимит</p>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Объём</p>
+                                <p class="table__value">73 120.00 RUB</p>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Остаток по заявке</p>
+                                <p class="table__value">0.00 RUB</p>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Получено без учета комиссии</p>
+                                <p class="table__value">1000.00 USDT</p>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Получено с учетом комиссии</p>
+                                <p class="table__value">998.50 USDT</p>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Коммисия</p>
+                                <p class="table__value">1.50 USDT</p>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Средняя цена</p>
+                                <p class="table__value">73.12 RUB</p>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Время открытия/закрытия позиции</p>
+                                <div class="table__value">
+                                    <div>О - 17.04.2022 21:22:33</div>
+                                    <div>С - 17.04.2022 23:00:33</div>
+                                </div>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Статус</p>
+                                <p class="table__value">Исполнена частично</p>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Детали</p>
+                                <p class="table__value"><a href="#" class="table__more-link">Перейти</a></p>
+                            </td>
+                        </tr>
+                        <tr class="table__line">
+                            <td class="table__cell">
+                                <p class="table__title-line">ID ордера</p>
+                                <p class="table__value">111232</p>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Тип/направление</p>
+                                <p class="table__value">Покупка/лимит</p>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Объём</p>
+                                <p class="table__value">73 120.00 RUB</p>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Остаток по заявке</p>
+                                <p class="table__value">0.00 RUB</p>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Получено без учета комиссии</p>
+                                <p class="table__value">1000.00 USDT</p>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Получено с учетом комиссии</p>
+                                <p class="table__value">998.50 USDT</p>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Коммисия</p>
+                                <p class="table__value">1.50 USDT</p>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Средняя цена</p>
+                                <p class="table__value">73.12 RUB</p>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Время открытия/закрытия позиции</p>
+                                <div class="table__value">
+                                    <div>О - 17.04.2022 21:22:33</div>
+                                    <div>С - 17.04.2022 23:00:33</div>
+                                </div>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Статус</p>
+                                <p class="table__value">Исполнена</p>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Детали</p>
+                                <p class="table__value"><a href="#" class="table__more-link">Перейти</a></p>
+                            </td>
+                        </tr>
+                        <tr class="table__line">
+                            <td class="table__cell">
+                                <p class="table__title-line">ID ордера</p>
+                                <p class="table__value">111232</p>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Тип/направление</p>
+                                <p class="table__value">Покупка/лимит</p>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Объём</p>
+                                <p class="table__value">73 120.00 RUB</p>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Остаток по заявке</p>
+                                <p class="table__value">0.00 RUB</p>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Получено без учета комиссии</p>
+                                <p class="table__value">1000.00 USDT</p>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Получено с учетом комиссии</p>
+                                <p class="table__value">998.50 USDT</p>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Коммисия</p>
+                                <p class="table__value">1.50 USDT</p>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Средняя цена</p>
+                                <p class="table__value">73.12 RUB</p>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Время открытия/закрытия позиции</p>
+                                <div class="table__value">
+                                    <div>О - 17.04.2022 21:22:33</div>
+                                    <div>С - 17.04.2022 23:00:33</div>
+                                </div>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Статус</p>
+                                <p class="table__value">Исполнена</p>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Детали</p>
+                                <p class="table__value"><a href="#" class="table__more-link">Перейти</a></p>
+                            </td>
+                        </tr>
+                        <tr class="table__line">
+                            <td class="table__cell">
+                                <p class="table__title-line">ID ордера</p>
+                                <p class="table__value">111232</p>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Тип/направление</p>
+                                <p class="table__value">Покупка/лимит</p>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Объём</p>
+                                <p class="table__value">73 120.00 RUB</p>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Остаток по заявке</p>
+                                <p class="table__value">0.00 RUB</p>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Получено без учета комиссии</p>
+                                <p class="table__value">1000.00 USDT</p>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Получено с учетом комиссии</p>
+                                <p class="table__value">998.50 USDT</p>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Коммисия</p>
+                                <p class="table__value">1.50 USDT</p>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Средняя цена</p>
+                                <p class="table__value">73.12 RUB</p>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Время открытия/закрытия позиции</p>
+                                <div class="table__value">
+                                    <div>О - 17.04.2022 21:22:33</div>
+                                    <div>С - 17.04.2022 23:00:33</div>
+                                </div>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Статус</p>
+                                <p class="table__value">Исполнена</p>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Детали</p>
+                                <p class="table__value"><a href="#" class="table__more-link">Перейти</a></p>
+                            </td>
+                        </tr>
+                        <tr class="table__line">
+                            <td class="table__cell">
+                                <p class="table__title-line">ID ордера</p>
+                                <p class="table__value">111232</p>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Тип/направление</p>
+                                <p class="table__value">Покупка/лимит</p>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Объём</p>
+                                <p class="table__value">73 120.00 RUB</p>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Остаток по заявке</p>
+                                <p class="table__value">0.00 RUB</p>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Получено без учета комиссии</p>
+                                <p class="table__value">1000.00 USDT</p>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Получено с учетом комиссии</p>
+                                <p class="table__value">998.50 USDT</p>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Коммисия</p>
+                                <p class="table__value">1.50 USDT</p>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Средняя цена</p>
+                                <p class="table__value">73.12 RUB</p>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Время открытия/закрытия позиции</p>
+                                <div class="table__value">
+                                    <div>О - 17.04.2022 21:22:33</div>
+                                    <div>С - 17.04.2022 23:00:33</div>
+                                </div>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Статус</p>
+                                <p class="table__value">Исполнена частично</p>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Детали</p>
+                                <p class="table__value"><a href="#" class="table__more-link">Перейти</a></p>
+                            </td>
+                        </tr>
+                        <tr class="table__line">
+                            <td class="table__cell">
+                                <p class="table__title-line">ID ордера</p>
+                                <p class="table__value">111232</p>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Тип/направление</p>
+                                <p class="table__value">Покупка/лимит</p>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Объём</p>
+                                <p class="table__value">73 120.00 RUB</p>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Остаток по заявке</p>
+                                <p class="table__value">0.00 RUB</p>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Получено без учета комиссии</p>
+                                <p class="table__value">1000.00 USDT</p>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Получено с учетом комиссии</p>
+                                <p class="table__value">998.50 USDT</p>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Коммисия</p>
+                                <p class="table__value">1.50 USDT</p>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Средняя цена</p>
+                                <p class="table__value">73.12 RUB</p>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Время открытия/закрытия позиции</p>
+                                <div class="table__value">
+                                    <div>О - 17.04.2022 21:22:33</div>
+                                    <div>С - 17.04.2022 23:00:33</div>
+                                </div>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Статус</p>
+                                <p class="table__value">Исполнена частично</p>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Детали</p>
+                                <p class="table__value"><a href="#" class="table__more-link">Перейти</a></p>
+                            </td>
+                        </tr>
+                        <tr class="table__line">
+                            <td class="table__cell">
+                                <p class="table__title-line">ID ордера</p>
+                                <p class="table__value">111232</p>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Тип/направление</p>
+                                <p class="table__value">Покупка/лимит</p>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Объём</p>
+                                <p class="table__value">73 120.00 RUB</p>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Остаток по заявке</p>
+                                <p class="table__value">0.00 RUB</p>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Получено без учета комиссии</p>
+                                <p class="table__value">1000.00 USDT</p>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Получено с учетом комиссии</p>
+                                <p class="table__value">998.50 USDT</p>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Коммисия</p>
+                                <p class="table__value">1.50 USDT</p>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Средняя цена</p>
+                                <p class="table__value">73.12 RUB</p>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Время открытия/закрытия позиции</p>
+                                <div class="table__value">
+                                    <div>О - 17.04.2022 21:22:33</div>
+                                    <div>С - 17.04.2022 23:00:33</div>
+                                </div>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Статус</p>
+                                <p class="table__value">Исполнена частично</p>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Детали</p>
+                                <p class="table__value"><a href="#" class="table__more-link">Перейти</a></p>
+                            </td>
+                        </tr>
+                        <tr class="table__line">
+                            <td class="table__cell">
+                                <p class="table__title-line">ID ордера</p>
+                                <p class="table__value">111232</p>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Тип/направление</p>
+                                <p class="table__value">Покупка/лимит</p>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Объём</p>
+                                <p class="table__value">73 120.00 RUB</p>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Остаток по заявке</p>
+                                <p class="table__value">0.00 RUB</p>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Получено без учета комиссии</p>
+                                <p class="table__value">1000.00 USDT</p>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Получено с учетом комиссии</p>
+                                <p class="table__value">998.50 USDT</p>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Коммисия</p>
+                                <p class="table__value">1.50 USDT</p>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Средняя цена</p>
+                                <p class="table__value">73.12 RUB</p>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Время открытия/закрытия позиции</p>
+                                <div class="table__value">
+                                    <div>О - 17.04.2022 21:22:33</div>
+                                    <div>С - 17.04.2022 23:00:33</div>
+                                </div>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Статус</p>
+                                <p class="table__value">Исполнена частично</p>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Детали</p>
+                                <p class="table__value"><a href="#" class="table__more-link">Перейти</a></p>
+                            </td>
+                        </tr>
+                        <tr class="table__line">
+                            <td class="table__cell">
+                                <p class="table__title-line">ID ордера</p>
+                                <p class="table__value">111232</p>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Тип/направление</p>
+                                <p class="table__value">Покупка/лимит</p>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Объём</p>
+                                <p class="table__value">73 120.00 RUB</p>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Остаток по заявке</p>
+                                <p class="table__value">0.00 RUB</p>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Получено без учета комиссии</p>
+                                <p class="table__value">1000.00 USDT</p>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Получено с учетом комиссии</p>
+                                <p class="table__value">998.50 USDT</p>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Коммисия</p>
+                                <p class="table__value">1.50 USDT</p>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Средняя цена</p>
+                                <p class="table__value">73.12 RUB</p>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Время открытия/закрытия позиции</p>
+                                <div class="table__value">
+                                    <div>О - 17.04.2022 21:22:33</div>
+                                    <div>С - 17.04.2022 23:00:33</div>
+                                </div>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Статус</p>
+                                <p class="table__value">Исполнена частично</p>
+                            </td>
+                            <td class="table__cell">
+                                <p class="table__title-line">Детали</p>
+                                <p class="table__value"><a href="#" class="table__more-link">Перейти</a></p>
+                            </td>
+                        </tr>
                     </tbody>
                 </table>
                 <p class="table__no-contect">Данные отсутствуют</p>

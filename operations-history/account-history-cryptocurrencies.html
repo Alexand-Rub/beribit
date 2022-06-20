@@ -5,18 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="telephone=no" name="format-detection" />
-    <link rel="stylesheet" href="~/css/normalize.css">
-    <link rel="stylesheet" href="~/css/simplebar.css">
-    <link rel="stylesheet" href="~/css/style.css">
-    <script src="~/js/menu.js"></script>
-    <script src="~/js/filter.js"></script>
-    <script src="~/js/footer.js"></script>
-    <script src="~/js/pages.js"></script>
-    <script src="~/js/table.js"></script>
-    <script src="~/js/simplebar.min.js"></script>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/simplebar.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dark.css">
+    <script src="js/menu.js"></script>
+    <script src="js/filter.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/pages.js"></script>
+    <script src="js/table.js"></script>
+    <script src="js/mode.js"></script>
+    <script src="js/simplebar.min.js"></script>
     <title>Beribit</title>
 </head>
-<body>
+<body class="dark">
     <div class="container">
         <header class="header">
             <a href="#" class="logo"></a>
@@ -49,6 +51,7 @@
                 <p class="user__mail">Iv***@mail.ru</p>
                 <a href="" class="user__log-out"></a>
             </div>
+            <button class="mode"></button>
         </header>
         <main class="main">
             <aside id="menu" class="menu">
@@ -134,7 +137,7 @@
             <!-- Таблица -->
 
             <section id="table" class="table account-history-cryptocurrencies">
-                <table class="table__blok">
+                <table class="account-history-cryptocurrencies table__blok">
                     <thead class="table__head">
                         <tr class="table__line">
                             <th class="table__title table__cell">Время</th>
