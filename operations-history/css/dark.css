@@ -103,6 +103,7 @@
 
 .dark .pages__item {
     color: #FFFFFF;
+    border-color: #324873;
 }
 
 .dark .pages__item:first-child {
@@ -116,6 +117,19 @@
 .dark .pages__item:hover {
     background-color: transparent;
     color: #40A7EA;
+    border-color: #40A7EA;
+}
+.dark .pages__item_active + .pages__item,
+.dark .pages__item:hover + .pages__item {
+    border-left: 1px solid #40A7EA;
+}
+.dark .pages__item:first-child.pages__item_active,
+.dark .pages__item:first-child:hover {
+    background-image: url(../img/dark/arrow-b-active.svg);
+}
+.dark .pages__item:last-child.pages__item_active,
+.dark .pages__item:last-child:hover {
+    background-image: url(../img/dark/arrow-n-active.svg);
 }
 
 
@@ -126,19 +140,19 @@
     background-image: url(../img/dark/wave_dark.svg);
 }
 
-.telegram {
+.dark .telegram {
     background-image: url(../img/dark/tg_dark.svg);
 }
-.youtube {
+.dark .youtube {
     background-image: url(../img/dark/youtube_dark.svg);
 }
-.twitter {
+.dark .twitter {
     background-image: url(../img/dark/tw_dark.svg);
 }
-.reddit {
+.dark .reddit {
     background-image: url(../img/dark/reddit_dark.svg);
 }
-.vk {
+.dark .vk {
     background-image: url(../img/dark/vk_dark.svg);
 }
 
@@ -156,9 +170,6 @@
 }
 
 @media (max-width: 1104px) {
-    .dark .mode {
-        display: none;
-    }
     .dark .filter__triger:hover,
     .dark .filter__option-name:hover {
         color: #FFFFFF;
