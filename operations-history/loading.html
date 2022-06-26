@@ -17,7 +17,7 @@
     <script type="text/javascript" src="~/js/loading-spinner.js"></script>
     <title>Beribit</title>
 </head>
-<body>
+<body class="dark">
     <div class="container">
         <header class="header">
             <a href="#" class="logo"></a>
@@ -116,11 +116,11 @@
                                 <p class="filter__triger">По направлению</p>
                                 <ul class="filter__options">
                                     <li class="filter__option">
-                                        <input type="radio" name="orientation" id="orientation-1" class="filter__radio">
+                                        <input type="radio" name="orientation" id="orientation-1" class="filter__radio" onclick="foo(this)">
                                         <label for="orientation-1" class="filter__option-name">Покупка</label>
                                     </li>
                                     <li class="filter__option">
-                                        <input type="radio" name="orientation" id="orientation-2" class="filter__radio">
+                                        <input type="radio" name="orientation" id="orientation-2" class="filter__radio" onclick="foo(this)">
                                         <label for="orientation-2" class="filter__option-name">Продажа</label>
                                     </li>
                                 </ul>

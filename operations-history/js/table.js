@@ -14,6 +14,8 @@ document.addEventListener('DOMContentLoaded', () => {
     
         if (table.length == 0) {
             document.querySelector('.main').classList.add('table_none')
+        } else {
+            document.querySelector('.main').classList.remove('table_none')
         }
     });
     
