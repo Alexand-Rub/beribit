@@ -11,7 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('DOMSubtreeModified', () => {
         var table = document.querySelectorAll('.table__value')
     
-    
         if (table.length == 0) {
             document.querySelector('.main').classList.add('table_none')
         } else {

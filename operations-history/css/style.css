@@ -534,26 +534,31 @@ body {
     pointer-events: none;
 }
 
-
-.main_load .search {
+.main_load .search,
+.table_none .search {
     border: 1px solid #C1ECFE;
     background-color: #FFFFFF;
 }
 
-.main_load .search__inp::placeholder {
+.main_load .search__inp::placeholder,
+.table_none .search__inp::placeholder {
     color: #C1ECFE;
 }
 
-.main_load .search__btn {
+.main_load .search__btn,
+.table_none .search__btn {
     background-image: url(../img/search_blok.svg);
 }
 
-.main_load .filter__btn {
+.main_load .filter__btn,
+.table_none .filter__btn {
     background: #C1ECFE;
 }
 
 .main_load .to-exel,
-.main_load .to-csv {
+.main_load .to-csv,
+.table_none .to-exel,
+.table_none .to-csv {
     color: #C1ECFE;
     border: 1px solid #C1ECFE;
 }
@@ -792,12 +797,18 @@ body {
 }
 
 .main_load .pages,
-.main_table_load .pages,
-.table_none .pages{
+.main_table_load .pages {
     pointer-events: none;
     filter: blur(5px);
-    
 }
+
+/* .main_load .pages__item,
+.main_table_load .pages__item {
+    pointer-events: none;
+    color: #AFB6BA;
+    border-color: #AFB6BA;
+}  */
+/* .table_none .pages__item */
 
 .pages__item {
     display: flex;
@@ -927,14 +938,8 @@ body {
 }
 
 @media (min-width: 1105px) {
-    .beribit-codes .table__cell:first-child {
-        max-width: 193px;
-    }
-    .beribit-codes .table__cell:nth-child(2n) {
-        max-width: 193px;
-    }
-    .beribit-codes .table__cell:last-child {
-        max-width: 161px;
+    .beribit-codes .table__cell {
+        width: 20%;
     }
     .account-history-cryptocurrencies .table__cell {
         max-width: 16%;
