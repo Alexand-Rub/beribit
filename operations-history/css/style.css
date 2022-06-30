@@ -942,47 +942,47 @@ body {
         width: 20%;
     }
     .account-history-cryptocurrencies .table__cell {
-        max-width: 16%;
+        width: 16%;
     }
     .details .table__cell {
-        max-width: 150px;
+        width: 150px;
     }
     .details .table__cell:first-child {
-        max-width: 100px;
+        width: 100px;
     }
     .fiat-account-history .table__cell {
-        max-width: 25%;
+        width: 25%;
     }
     /* 1800 */
     .my-orders .table__cell {
-        /* max-width: auto; */
+        /* width: auto; */
     }
     .my-orders .table__cell:first-child {
-        max-width: 102px;
+        width: 102px;
     }
     .my-orders .table__cell:nth-child(2n) {
-        max-width: 174px;
+        width: 174px;
     }
     .my-orders .table__cell:nth-child(3n) {
-        max-width: 154px;
+        width: 154px;
     }
     .my-orders .table__cell:nth-child(4n) {
-        max-width: 172px;
+        width: 172px;
     }
     .my-orders .table__cell:nth-child(5n) {
-        max-width: 212px;
+        width: 212px;
     }
     .my-orders .table__cell:nth-child(6n) {
-        max-width: 172px;
+        width: 172px;
     }
     .my-orders .table__cell:nth-child(7n) {
-        max-width: 114px;
+        width: 114px;
     }
     .my-orders .table__cell:nth-child(8n) {
-        max-width: 172px;
+        width: 172px;
     }
     .my-orders .table__cell:nth-child(9n) {
-        max-width: 212px;
+        width: 212px;
     }
     .my-orders .table__cell:nth-child(9n) .table__value {
         text-align: left;
@@ -990,40 +990,40 @@ body {
     }
     
     .my-orders .table__cell:nth-child(10n) {
-        max-width: 172px;
+        width: 172px;
     }
     .my-orders .table__cell:last-child {
-        max-width: 109px;
+        width: 109px;
     }
     .P2P .table__cell {
-        max-width: 14%;
+        width: 14%;
     }
     .trade-turnover .table__cell {
-        max-width: 14%;
+        width: 14%;
     }
     .transaction-history .table__cell:first-child {
-        max-width: 140px;
+        width: 140px;
     }
     .transaction-history .table__cell:nth-child(2n) {
-        max-width: 91px;
+        width: 91px;
     }
     .transaction-history .table__cell:nth-child(3n) {
-        max-width: 120px;
+        width: 120px;
     }
     .transaction-history .table__cell:nth-child(4n) {
-        max-width: 134px;
+        width: 134px;
     }
     .transaction-history .table__cell:nth-child(5n) {
-        max-width: 54px;
+        width: 54px;
     }
     .transaction-history .table__cell:nth-child(6n) {
-        max-width: 94px;
+        width: 94px;
     }
     .transaction-history .table__cell:nth-child(7n) {
-        max-width: 149px;
+        width: 149px;
     }
     .transaction-history .table__cell:nth-child(8n) {
-        max-width: 106px;
+        width: 106px;
     }
 }
 
